@@ -24,7 +24,93 @@ This is a API bases simple app, on the root URL of this app it will call a servi
 
 
 * API documentation
+There are 3 APIS, all of them are GET requests and not expecting a parameter from you.
 
+- **Create/Generate Random tree Tree
+  https://random-tree-app.herokuapp.com/api/v1/nodes
+This API will call a 3rd party hosted on heroku as well (https://random-tree.herokuapp.com/)
+this will generate a random tree, which will be saved in our database and will be available to be searched on later.
+each new call for this API will result in new tree.
+**response example
+
+```
+{
+   "success":true,
+   "msg":"Created successfully.",
+   "id":"1",
+   "child":[
+      {
+         "id":"3517",
+         "child":[
+            
+         ]
+      },
+      {
+         "id":"6468",
+         "child":[
+            {
+               "id":"7942",
+               "child":[
+                  {
+                     "id":"7675",
+                     "child":[]
+                  },
+                [
+            }
+         ]
+      }
+   ]
+}
+```
+  
+- **Get parent node by child id
+  https://random-tree-app.herokuapp.com/api/v1/nodes/1191/find_parent
+
+  **response example
+
+  ```
+    {
+     "success":true,
+     "msg":"Parent is found successfully.",
+     "id":"6257"
+    }
+  ```
+
+- **Get child nodes by parent id
+ https://random-tree-app.herokuapp.com/api/v1/nodes/1/find_childs
+
+ **response example
+
+  ```
+   {
+   "success":true,
+   "msg":"Childs are found successfully.",
+   "id":"1",
+   "childs":[
+      [
+         {
+            "id":"2744"
+         },
+         {
+            "id":"3791"
+         },
+         {
+            "id":"6497"
+         },
+         {
+            "id":"9358"
+         },
+         {
+            "id":"6589"
+         },
+         {
+            "id":"4514"
+         }
+      ]
+   ]
+  }
+  ```
+ 
   
 
 * Improvement points ( To-Do list )

@@ -26,8 +26,9 @@ This is a API bases simple app, on the root URL of this app it will call a servi
 * API documentation
 There are 3 APIS, all of them are GET requests and not expecting a parameter from you.
 
-  - **Create/Generate Random tree Tree
-      https://random-tree-app.herokuapp.com/api/v1/nodes
+  - **Create/Generate Random tree Tree**
+
+    https://random-tree-app.herokuapp.com/api/v1/nodes
     This API will call a 3rd party hosted on heroku as well (https://random-tree.herokuapp.com/)
     this will generate a random tree, which will be saved in our database and will be available to be searched on later.
     each new call for this API will result in new tree.

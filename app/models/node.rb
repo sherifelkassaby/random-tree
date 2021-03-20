@@ -15,7 +15,7 @@ class Node < ApplicationRecord
 
     # excluding grand children's
     childs_list = nodes_list.select{ |node| node.depth == self.depth + 1}
-    childs_hash = childs_list.map { |node| { id: node.node_id, path: node.path } }
+    childs_hash = childs_list.map { |node| { id: node.node_id } }
 
     { id: self.node_id, childs: [childs_hash]}
   end

@@ -1,4 +1,4 @@
-# README
+# READMEe
 This is a API bases simple app, on the root URL of this app it will call a service on Heroku to generate random tree then saves it in database. as a response it will provide json format drawn tree.
 
 * Ruby version

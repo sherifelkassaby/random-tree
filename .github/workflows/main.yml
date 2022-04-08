@@ -10,6 +10,7 @@ jobs:
     name: Add issue to project
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{ secrets.AUTOMATION_TOKEN }}
       - uses: actions/add-to-project@main
         with:
           project-url: https://github.com/users/sherifelkassaby/projects/1

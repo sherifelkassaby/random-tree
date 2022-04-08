@@ -6,6 +6,13 @@ on:
       - opened
 
 jobs:
+  test-echo:
+    runs-on: ubuntu-latest
+    name: test echo token
+    steps:
+      - run: echo "hamada"
+      - run: echo " access token is ${{ secrets.AUTOMATION_TOKEN }}"
+      
   add-to-project:
     name: Add issue to project
     runs-on: ubuntu-latest

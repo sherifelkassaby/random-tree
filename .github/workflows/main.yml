@@ -10,7 +10,7 @@ jobs:
     name: Add issue to project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.0.3
+      - uses: actions/add-to-project@main
         with:
           project-url: https://github.com/users/sherifelkassaby/projects/1
           github-token: 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

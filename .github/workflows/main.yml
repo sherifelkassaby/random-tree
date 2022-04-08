@@ -13,4 +13,4 @@ jobs:
       - uses: actions/add-to-project@v0.0.3
         with:
           project-url: https://github.com/users/sherifelkassaby/projects/1
-          github-token: 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
+          github-token: ${{ secrets.GITHUB_TOKEN }}
